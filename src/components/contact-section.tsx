@@ -21,24 +21,18 @@ const ways = [
         title: "Partner with Us",
         description:
             "Collaborate with us on community health initiatives, research, or program expansion.",
-        color: "text-primary",
-        bgColor: "bg-primary/10",
     },
     {
         icon: Users,
         title: "Volunteer",
         description:
             "Lend your skills, time, or expertise, locally or remotely.",
-        color: "text-secondary",
-        bgColor: "bg-secondary/10",
     },
     {
         icon: HandHeart,
         title: "Donate",
         description:
             "Your contributions directly support vulnerable children and caregivers with health services and training.",
-        color: "text-accent",
-        bgColor: "bg-accent/10",
     },
 ];
 
@@ -73,7 +67,7 @@ export function ContactSection() {
                 <div
                     className={`text-center mb-16 ${isVisible ? "slide-up" : "opacity-0"}`}
                 >
-                    <Badge className="mb-4 bg-primary text-white">Get Involved</Badge>
+                    <Badge className="mb-4">Get Involved</Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Join Us in Making a Difference
                     </h2>
@@ -96,24 +90,13 @@ export function ContactSection() {
                                 key={way.title}
                                 className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300"
                             >
-                                <div
-                                    className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r ${way.color === "text-primary"
-                                        ? "from-primary to-blue-600"
-                                        : way.color === "text-secondary"
-                                            ? "from-secondary to-green-600"
-                                            : "from-accent to-orange-500"
-                                        }`}
-                                />
+                                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                                 <CardHeader className="text-center pb-3">
                                     <div className="relative mx-auto mb-4">
-                                        <div
-                                            className={`w-20 h-20 ${way.bgColor} rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300`}
-                                        >
-                                            <Icon className={`w-10 h-10 ${way.color}`} />
+                                        <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                            <Icon className="w-10 h-10 text-primary" />
                                         </div>
-                                        <div
-                                            className={`absolute inset-0 ${way.bgColor} rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300`}
-                                        />
+                                        <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                                     </div>
                                     <CardTitle className="text-xl font-bold">{way.title}</CardTitle>
                                 </CardHeader>
@@ -168,12 +151,12 @@ export function ContactSection() {
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <Phone className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                                        <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                                         <div>
                                             <h4 className="font-semibold mb-1">Phone</h4>
                                             <a
                                                 href="tel:+256784267680"
-                                                className="text-muted-foreground hover:text-secondary transition-colors"
+                                                className="text-muted-foreground hover:text-primary transition-colors"
                                             >
                                                 +256 784 267 680
                                             </a>
@@ -181,14 +164,14 @@ export function ContactSection() {
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <Mail className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                                        <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                                         <div>
                                             <h4 className="font-semibold mb-1">Connect Online</h4>
                                             <a
                                                 href="https://www.linkedin.com/company/109986222/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-muted-foreground hover:text-accent transition-colors"
+                                                className="text-muted-foreground hover:text-primary transition-colors"
                                             >
                                                 LinkedIn
                                             </a>
@@ -210,9 +193,9 @@ export function ContactSection() {
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="bg-accent hover:bg-accent/90"
+                                    className="bg-gradient-to-r from-primary to-secondary"
                                 >
-                                    <a href="#contact">Make a Donation</a>
+                                    <a href="/donate">Make a Donation</a>
                                 </Button>
                             </div>
                         </CardContent>

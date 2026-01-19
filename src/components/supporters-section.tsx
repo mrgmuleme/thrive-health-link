@@ -40,15 +40,12 @@ export function SupportersSection() {
     }, []);
 
     return (
-        <section
-            ref={sectionRef}
-            className="py-24 bg-background"
-        >
+        <section ref={sectionRef} className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                     className={`text-center mb-16 ${isVisible ? "slide-up" : "opacity-0"}`}
                 >
-                    <Badge className="mb-4 bg-secondary text-white">Our Partners</Badge>
+                    <Badge className="mb-4">Our Partners</Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Proudly Supported By
                     </h2>
@@ -68,7 +65,7 @@ export function SupportersSection() {
                             key={supporter.name}
                             className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/20 shadow-lg hover:shadow-2xl transition-all hover:scale-105 duration-300"
                         >
-                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-secondary to-green-600" />
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                             <CardContent className="p-8 text-center">
                                 <a
                                     href={supporter.url}

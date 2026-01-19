@@ -105,7 +105,7 @@ export default function GalleryPage() {
                     <Badge className="mb-4 bg-primary text-white">Our Impact</Badge>
                     <h1 className="text-5xl md:text-6xl font-black mb-6">
                         <span className="block text-foreground mb-2">Moments That</span>
-                        <span className="block bg-gradient-to-r from-secondary via-green-600 to-secondary bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                             Matter Most
                         </span>
                     </h1>

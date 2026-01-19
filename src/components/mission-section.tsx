@@ -10,40 +10,30 @@ const values = [
         title: "Collaboration",
         description:
             "We partner with families, community leaders, and healthcare providers to build a collective front against health disparities.",
-        color: "text-primary",
-        bgColor: "bg-primary/10",
     },
     {
         letter: "A",
         title: "Accessibility",
         description:
             "We are dedicated to dismantling the socioeconomic walls that prevent children from receiving care.",
-        color: "text-secondary",
-        bgColor: "bg-secondary/10",
     },
     {
         letter: "R",
         title: "Respect",
         description:
             "We honor the inherent worth and agency of every family, ensuring healthcare is delivered with cultural sensitivity.",
-        color: "text-accent",
-        bgColor: "bg-accent/10",
     },
     {
         letter: "E",
         title: "Empathy",
         description:
             "We lead with our hearts, rooting our work in a deep understanding of the lived experiences of the communities we serve.",
-        color: "text-primary",
-        bgColor: "bg-primary/10",
     },
     {
         letter: "S",
         title: "Sustainability",
         description:
             "We build lasting solutions and resilient systems to ensure that our impact on child health continues for generations to come.",
-        color: "text-secondary",
-        bgColor: "bg-secondary/10",
     },
 ];
 
@@ -74,22 +64,20 @@ export function MissionSection() {
                 <div
                     className={`text-center mb-16 ${isVisible ? "slide-up" : "opacity-0"}`}
                 >
-                    <Badge className="mb-4 bg-primary text-white">
-                        Mission & Values
-                    </Badge>
+                    <Badge className="mb-4">Mission & Values</Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Guided by Purpose, Driven by Values
                     </h2>
                 </div>
 
-                {/* Vision and Mission - Modern Cards Without Harsh Borders */}
+                {/* Vision and Mission - Modern Cards */}
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
                     <Card
                         className={`group relative overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 border-0 shadow-lg hover:shadow-2xl transition-all duration-300 ${isVisible ? "slide-up" : "opacity-0"
                             }`}
                         style={{ animationDelay: "0.2s" }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-600 to-primary" />
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
                         <CardHeader>
                             <CardTitle className="text-2xl text-primary flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -114,11 +102,11 @@ export function MissionSection() {
                             }`}
                         style={{ animationDelay: "0.3s" }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-green-600 to-secondary" />
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
                         <CardHeader>
-                            <CardTitle className="text-2xl text-secondary flex items-center gap-3">
+                            <CardTitle className="text-2xl text-secondary-foreground flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                                    <svg className="w-6 h-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg className="w-6 h-6 text-secondary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
@@ -134,7 +122,7 @@ export function MissionSection() {
                     </Card>
                 </div>
 
-                {/* Core Values: CARES - Modern Design */}
+                {/* Core Values: CARES */}
                 <div
                     className={`${isVisible ? "fade-in" : "opacity-0"}`}
                     style={{ animationDelay: "0.4s" }}
@@ -152,24 +140,15 @@ export function MissionSection() {
                                 key={value.letter}
                                 className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300"
                             >
-                                <div
-                                    className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r ${value.color === 'text-primary'
-                                            ? 'from-primary to-blue-600'
-                                            : value.color === 'text-secondary'
-                                                ? 'from-secondary to-green-600'
-                                                : 'from-accent to-orange-500'
-                                        }`}
-                                />
+                                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                                 <CardHeader className="text-center pb-3">
                                     <div className="relative mx-auto mb-4">
-                                        <div
-                                            className={`w-20 h-20 ${value.bgColor} rounded-full flex items-center justify-center relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                                        >
-                                            <span className={`text-4xl font-black ${value.color}`}>
+                                        <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                            <span className="text-4xl font-black text-primary">
                                                 {value.letter}
                                             </span>
                                         </div>
-                                        <div className={`absolute inset-0 ${value.bgColor} rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300`} />
+                                        <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
                                     </div>
                                     <CardTitle className="text-lg font-bold">{value.title}</CardTitle>
                                 </CardHeader>

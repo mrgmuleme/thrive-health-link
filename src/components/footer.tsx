@@ -31,9 +31,9 @@ export function Footer() {
                         <Button
                             asChild
                             size="sm"
-                            className="bg-accent hover:bg-accent/90"
+                            className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all"
                         >
-                            <a href="#contact">Support Our Mission</a>
+                            <a href="/donate">Support Our Mission</a>
                         </Button>
                     </div>
 

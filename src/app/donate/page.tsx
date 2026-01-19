@@ -103,7 +103,7 @@ export default function DonatePage() {
                     </Badge>
                     <h1 className="text-5xl md:text-6xl font-black mb-6">
                         <span className="block text-foreground mb-2">Your Donation</span>
-                        <span className="block bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                             Saves Lives
                         </span>
                     </h1>
@@ -131,22 +131,19 @@ export default function DonatePage() {
                                 <Card
                                     key={tier.name}
                                     className={`group relative overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer border-0 ${selectedTier === tier.name
-                                            ? "ring-2 ring-primary ring-offset-4 scale-105 shadow-xl"
-                                            : "shadow-lg hover:scale-105"
+                                        ? "ring-2 ring-primary ring-offset-4 scale-105 shadow-xl"
+                                        : "shadow-lg hover:scale-105"
                                         } ${tier.popular ? "ring-2 ring-accent ring-offset-2" : ""}`}
                                     onClick={() => setSelectedTier(tier.name)}
                                 >
                                     {/* Gradient Top Border */}
-                                    <div className={`absolute top-0 left-0 w-full h-1 ${tier.color === 'bg-primary' ? 'bg-gradient-to-r from-primary via-blue-600 to-primary' :
-                                            tier.color === 'bg-secondary' ? 'bg-gradient-to-r from-secondary via-green-600 to-secondary' :
-                                                'bg-gradient-to-r from-accent via-orange-500 to-accent'
-                                        }`} />
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
 
                                     {/* Background Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20 -z-10" />
 
                                     {tier.popular && (
-                                        <div className="absolute top-4 right-4 bg-gradient-to-r from-accent to-orange-500 text-white px-3 py-1 text-xs font-bold rounded-full shadow-lg animate-pulse">
+                                        <div className="absolute top-4 right-4 bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 text-xs font-bold rounded-full shadow-lg animate-pulse">
                                             ⭐ POPULAR
                                         </div>
                                     )}
@@ -207,7 +204,7 @@ export default function DonatePage() {
                                 </div>
                                 <Button
                                     size="lg"
-                                    className="bg-gradient-to-r from-primary to-blue-600 hover:shadow-xl"
+                                    className="bg-gradient-to-r from-primary to-secondary hover:shadow-xl"
                                 >
                                     Donate ${customAmount || "0"}
                                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -263,7 +260,7 @@ export default function DonatePage() {
                     </p>
                     <Button
                         size="lg"
-                        className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl text-lg px-12 py-6"
+                        className="bg-gradient-to-r from-primary to-secondary hover:shadow-2xl text-lg px-12 py-6"
                     >
                         <Heart className="mr-2 w-5 h-5" fill="currentColor" />
                         Donate Now

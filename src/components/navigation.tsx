@@ -45,7 +45,7 @@ export function Navigation() {
               <img
                 src="/logo.jpeg"
                 alt="Thrive Health Link Logo"
-                className="w-auto h-[44px] rounded-full ring-4 ring-white/50 shadow-xl relative transform group-hover:scale-110 transition-transform duration-300"
+                className="w-auto h-[32px] rounded-full ring-4 ring-white/50 shadow-xl relative transform group-hover:scale-110 transition-transform duration-300"
               />
             </div>
           </Link>
@@ -65,7 +65,7 @@ export function Navigation() {
             ))}
             <Button
               asChild
-              className="ml-4 bg-gradient-to-r from-accent via-orange-500 to-accent bg-[length:200%_100%] hover:bg-[position:100%_0%] transition-all duration-500 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="ml-4 bg-gradient-to-r from-primary to-secondary hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               <Link href="/donate" className="flex items-center gap-2">
                 <Heart className="w-4 h-4" fill="currentColor" />
@@ -112,7 +112,7 @@ export function Navigation() {
               ))}
               <Button
                 asChild
-                className="mt-4 bg-gradient-to-r from-accent to-orange-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="mt-4 bg-gradient-to-r from-primary to-secondary hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
                 <Link
                   href="/donate"

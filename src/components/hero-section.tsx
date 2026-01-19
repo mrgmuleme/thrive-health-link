@@ -54,11 +54,8 @@ export function HeroSection() {
                             <span className="block text-foreground mb-2">
                                 Every Child
                             </span>
-                            <span className="block bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent animate-gradient">
-                                Deserves
-                            </span>
-                            <span className="block bg-gradient-to-r from-secondary via-green-600 to-secondary bg-clip-text text-transparent animate-gradient" style={{ animationDelay: "0.2s" }}>
-                                Healthcare
+                            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                                Deserves Healthcare
                             </span>
                         </h1>
 
@@ -73,7 +70,7 @@ export function HeroSection() {
                             <Button
                                 asChild
                                 size="lg"
-                                className="bg-gradient-to-r from-primary to-blue-600 hover:shadow-2xl hover:shadow-primary/50 text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300"
+                                className="bg-gradient-to-r from-primary to-secondary hover:shadow-2xl text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300"
                             >
                                 <a href="#contact" className="flex items-center gap-2">
                                     Join Our Mission

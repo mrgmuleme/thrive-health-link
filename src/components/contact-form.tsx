@@ -54,7 +54,7 @@ export function ContactForm({ type }: ContactFormProps) {
                     </div>
                     <div className="absolute inset-0 bg-secondary/10 rounded-full blur-2xl opacity-60" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-secondary to-green-600 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                     Thank You!
                 </h3>
                 <p className="text-muted-foreground">
@@ -130,7 +130,7 @@ export function ContactForm({ type }: ContactFormProps) {
 
             <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-xl text-lg py-6 font-semibold transform hover:scale-[1.02] transition-all duration-300"
+                className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-xl text-lg py-6 font-semibold transform hover:scale-[1.02] transition-all duration-300"
                 disabled={isSubmitting}
             >
                 {isSubmitting ? (

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Smartphone, MessageSquare, Bell, Zap } from "lucide-react";
 
 export function InnovationSection() {
@@ -38,7 +37,7 @@ export function InnovationSection() {
                 <div
                     className={`text-center mb-16 ${isVisible ? "slide-up" : "opacity-0"}`}
                 >
-                    <Badge className="mb-4 bg-accent text-white">Latest Innovation</Badge>
+                    <Badge className="mb-4">Latest Innovation</Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Introducing Vaxclue
                     </h2>
@@ -102,7 +101,7 @@ export function InnovationSection() {
                     style={{ animationDelay: "0.4s" }}
                 >
                     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-blue-600" />
+                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                         <CardHeader className="pb-3">
                             <div className="relative mb-2">
                                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
@@ -120,13 +119,13 @@ export function InnovationSection() {
                     </Card>
 
                     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-secondary to-green-600" />
+                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                         <CardHeader className="pb-3">
                             <div className="relative mb-2">
-                                <div className="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <MessageSquare className="w-7 h-7 text-secondary" />
+                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <MessageSquare className="w-7 h-7 text-primary" />
                                 </div>
-                                <div className="absolute inset-0 bg-secondary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                             </div>
                             <CardTitle className="text-base font-bold">Digital Job Aide</CardTitle>
                         </CardHeader>
@@ -138,13 +137,13 @@ export function InnovationSection() {
                     </Card>
 
                     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-accent to-orange-500" />
+                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                         <CardHeader className="pb-3">
                             <div className="relative mb-2">
-                                <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <Bell className="w-7 h-7 text-accent" />
+                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <Bell className="w-7 h-7 text-primary" />
                                 </div>
-                                <div className="absolute inset-0 bg-accent/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                             </div>
                             <CardTitle className="text-base font-bold">Automated Follow-up</CardTitle>
                         </CardHeader>
@@ -156,7 +155,7 @@ export function InnovationSection() {
                     </Card>
 
                     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-blue-600" />
+                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                         <CardHeader className="pb-3">
                             <div className="relative mb-2">
                                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">

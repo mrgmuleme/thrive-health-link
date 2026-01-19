@@ -11,29 +11,21 @@ const features = [
         icon: Heart,
         title: "Community First",
         description: "Partnering with families and local leaders to build lasting health solutions.",
-        color: "text-primary",
-        bgColor: "bg-primary/10",
     },
     {
         icon: Users,
         title: "Youth-Led Impact",
         description: "Empowering young leaders to drive health innovation in their communities.",
-        color: "text-secondary",
-        bgColor: "bg-secondary/10",
     },
     {
         icon: Target,
         title: "Zero Dose Focus",
         description: "Reaching children who have never received their first vaccine dose.",
-        color: "text-accent",
-        bgColor: "bg-accent/10",
     },
     {
         icon: Globe,
         title: "Sustainable Change",
         description: "Building resilient systems that continue to serve for generations.",
-        color: "text-primary",
-        bgColor: "bg-primary/10",
     },
 ];
 
@@ -62,7 +54,7 @@ export function AboutSection() {
         <section id="about" ref={sectionRef} className="py-24 bg-muted/30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`text-center mb-16 ${isVisible ? "slide-up" : "opacity-0"}`}>
-                    <Badge className="mb-4 bg-secondary text-white">About Us</Badge>
+                    <Badge className="mb-4">About Us</Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Building Healthier Communities Together
                     </h2>
@@ -125,24 +117,13 @@ export function AboutSection() {
                                 key={feature.title}
                                 className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300"
                             >
-                                <div
-                                    className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r ${feature.color === "text-primary"
-                                            ? "from-primary to-blue-600"
-                                            : feature.color === "text-secondary"
-                                                ? "from-secondary to-green-600"
-                                                : "from-accent to-orange-500"
-                                        }`}
-                                />
+                                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                                 <CardHeader className="pb-3">
                                     <div className="relative mb-4">
-                                        <div
-                                            className={`w-16 h-16 ${feature.bgColor} rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300`}
-                                        >
-                                            <Icon className={`w-8 h-8 ${feature.color}`} />
+                                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                            <Icon className="w-8 h-8 text-primary" />
                                         </div>
-                                        <div
-                                            className={`absolute inset-0 ${feature.bgColor} rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300`}
-                                        />
+                                        <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                                     </div>
                                     <CardTitle className="text-lg font-bold">
                                         {feature.title}
