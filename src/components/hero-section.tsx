@@ -52,7 +52,7 @@ export function HeroSection() {
                         {/* Main Headline */}
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1]">
                             <span className="block text-foreground mb-2">
-                                Main Headline
+                                Every Child
                             </span>
                             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                                 Deserves Healthcare
