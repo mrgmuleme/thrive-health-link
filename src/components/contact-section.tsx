@@ -168,10 +168,10 @@ export function ContactSection() {
                                         <div>
                                             <h4 className="font-semibold mb-1">Email</h4>
                                             <a
-                                                href="mailto:thrivehealthlink@gmail.com"
+                                                href="mailto:info@thrivehealthlink.org"
                                                 className="text-muted-foreground hover:text-primary transition-colors"
                                             >
-                                                thrivehealthlink@gmail.com
+                                                info@thrivehealthlink.org
                                             </a>
                                         </div>
                                     </div>

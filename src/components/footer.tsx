@@ -92,10 +92,10 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="mailto:thrivehealthlink@gmail.com"
+                                    href="mailto:info@thrivehealthlink.org"
                                     className="hover:text-secondary transition-colors"
                                 >
-                                    thrivehealthlink@gmail.com
+                                    info@thrivehealthlink.org
                                 </a>
                             </li>
                             <li>
