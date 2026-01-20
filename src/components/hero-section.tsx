@@ -7,9 +7,9 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Users, Heart, Award, TrendingUp } from "lucide-react";
 
 const stats = [
-    { icon: Users, value: "5,000+", label: "Children Reached", color: "text-primary" },
-    { icon: Heart, value: "98%", label: "Completion Rate", color: "text-secondary" },
-    { icon: Award, value: "50+", label: "Communities", color: "text-accent" },
+    { icon: Users, value: "2,000+", label: "Children connected to care since 2024", color: "text-primary" },
+    { icon: Heart, value: "98%", label: "Follow-up success on immunization referrals", color: "text-secondary" },
+    { icon: Award, value: "50+", label: "Communities reached", color: "text-accent" },
     { icon: TrendingUp, value: "85%", label: "Impact Growth", color: "text-primary" },
 ];
 
@@ -44,25 +44,25 @@ export function HeroSection() {
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full">
                             <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-                            <span className="text-sm font-medium text-primary">
-                                Youth-Led Health Innovation
+                            <span className="text-xs font-light md:font-medium text-primary">
+                                Youth-Led Health Innovation to close the zero-dose gap
                             </span>
                         </div>
 
                         {/* Main Headline */}
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1]">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.1]">
                             <span className="block text-foreground mb-2">
-                                Every Child
+                                Linking Children
                             </span>
                             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                                Deserves Healthcare
+                                To Life-Saving Immunization
                             </span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light">
-                            Breaking barriers to immunization access in{" "}
-                            <span className="text-primary font-semibold">Uganda's underserved communities</span>
-                            {" "}through innovation, compassion, and community partnership.
+                            We use{" "}
+                            <span className="text-primary font-semibold">digital tools and coordinated partnerships</span>
+                            {" "}to ensure that no child is missed.
                         </p>
 
                         {/* CTA Buttons */}
@@ -73,18 +73,24 @@ export function HeroSection() {
                                 className="bg-gradient-to-r from-primary to-secondary hover:shadow-2xl text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300"
                             >
                                 <a href="#contact" className="flex items-center gap-2">
-                                    Join Our Mission
+                                    Discover Our Impact
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </Button>
-                            <Button
-                                asChild
-                                size="lg"
-                                variant="outline"
-                                className="text-lg px-8 py-6 border-2 hover:bg-primary/5 transform hover:scale-105 transition-all duration-300"
-                            >
-                                <a href="#about">Discover Our Impact</a>
-                            </Button>
+                        </div>
+
+                        {/* Mobile: Single Featured Image (appears before stats on mobile) */}
+                        <div
+                            className={`lg:hidden relative h-[400px] rounded-2xl overflow-hidden shadow-2xl group ${isVisible ? "animate-in slide-in-from-bottom duration-1000" : "opacity-0"}`}
+                            style={{ animationDelay: "0.3s" }}
+                        >
+                            <Image
+                                src="/thrive-images/image3.jpeg"
+                                alt="Community health worker"
+                                fill
+                                className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
 
                         {/* Stats Row */}
@@ -112,9 +118,9 @@ export function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Image Bento Grid */}
+                    {/* Desktop: Bento Grid */}
                     <div
-                        className={`${isVisible ? "animate-in slide-in-from-right duration-1000" : "opacity-0"}`}
+                        className={`hidden lg:block ${isVisible ? "animate-in slide-in-from-right duration-1000" : "opacity-0"}`}
                         style={{ animationDelay: "0.2s" }}
                     >
                         <div className="grid grid-cols-12 grid-rows-12 gap-4 h-[600px]">

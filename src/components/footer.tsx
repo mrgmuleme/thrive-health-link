@@ -92,6 +92,14 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
+                                    href="mailto:thrivehealthlink@gmail.com"
+                                    className="hover:text-secondary transition-colors"
+                                >
+                                    thrivehealthlink@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                     href="https://www.linkedin.com/company/109986222/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -109,9 +117,22 @@ export function Footer() {
                     <p>
                         © {currentYear} Thrive Health Link. All rights reserved.
                     </p>
-                    <p className="text-gray-400">
-                        Ensuring universal access to care for every child
-                    </p>
+                    <div className="text-center md:text-right">
+                        <p className="text-gray-400">
+                            Ensuring universal access to care for every child
+                        </p>
+                        <p className="text-gray-500 text-xs mt-1">
+                            Thrive Health Link operates under{" "}
+                            <a
+                                href="https://www.fasiuganda.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary hover:text-primary/80 transition-colors"
+                            >
+                                FASI Uganda
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>

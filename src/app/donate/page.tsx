@@ -24,7 +24,7 @@ const donationTiers = [
             "Recognition on our website",
             "Tax deduction certificate",
         ],
-        impact: "Provides vaccines for 2 children",
+        impact: "Enables 5 under-immunized children to get fully vaccinated",
     },
     {
         name: "Champion",
@@ -71,12 +71,12 @@ const donationTiers = [
 const impactAreas = [
     {
         title: "Direct Healthcare",
-        description: "Vaccines, medical supplies, and health worker support",
+        description: "Transporting children to health facilities for immunization",
         icon: Stethoscope,
     },
     {
         title: "Community Training",
-        description: "VHT and CRP capacity building programs",
+        description: "Training of VHTs and CRPs to improve immunization coverage",
         icon: Users,
     },
     {

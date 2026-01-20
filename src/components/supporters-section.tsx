@@ -56,56 +56,46 @@ export function SupportersSection() {
                 </div>
 
                 <div
-                    className={`grid md:grid-cols-2 gap-8 max-w-4xl mx-auto ${isVisible ? "fade-in" : "opacity-0"
-                        }`}
+                    className={`grid md:grid-cols-2 gap-12 max-w-5xl mx-auto ${isVisible ? "fade-in" : "opacity-0"}`}
                     style={{ animationDelay: "0.2s" }}
                 >
                     {supporters.map((supporter, index) => (
-                        <Card
+                        <a
                             key={supporter.name}
-                            className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/20 shadow-lg hover:shadow-2xl transition-all hover:scale-105 duration-300"
+                            href={supporter.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block"
                         >
-                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
-                            <CardContent className="p-8 text-center">
-                                <a
-                                    href={supporter.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block group"
-                                >
-                                    <h3 className="text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors mb-3">
-                                        {supporter.name}
-                                    </h3>
-                                    <p className="text-muted-foreground leading-relaxed">
-                                        {supporter.description}
-                                    </p>
-                                    <span className="text-sm text-primary font-semibold mt-4 inline-block group-hover:underline">
-                                        Learn More →
-                                    </span>
-                                </a>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
+                            <Card className="relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/20 shadow-lg hover:shadow-2xl transition-all hover:scale-105 duration-300 h-full">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
+                                <CardContent className="p-10">
+                                    {/* Logo Container */}
+                                    <div className="relative h-32 mb-6 flex items-center justify-center bg-white rounded-lg p-6 shadow-sm group-hover:shadow-md transition-shadow">
+                                        <Image
+                                            src={`/partners/${supporter.name === "D-Prize" ? "d-prize" : "fasi"}.jpeg`}
+                                            alt={`${supporter.name} logo`}
+                                            fill
+                                            className="object-contain p-4"
+                                        />
+                                    </div>
 
-                {/* Community Impact Images */}
-                <div
-                    className={`grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 ${isVisible ? "fade-in" : "opacity-0"
-                        }`}
-                    style={{ animationDelay: "0.4s" }}
-                >
-                    {[7, 8, 9, 10].map((num) => (
-                        <div
-                            key={num}
-                            className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-                        >
-                            <Image
-                                src={`/thrive-images/image${num}.jpeg`}
-                                alt={`Community impact ${num}`}
-                                fill
-                                className="object-cover hover:scale-110 transition-transform duration-300"
-                            />
-                        </div>
+                                    {/* Partner Info */}
+                                    <div className="text-center">
+                                        <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                                            {supporter.name}
+                                        </h3>
+                                        <p className="text-muted-foreground leading-relaxed mb-4">
+                                            {supporter.description}
+                                        </p>
+                                        <div className="inline-flex items-center gap-2 text-sm text-primary font-semibold group-hover:gap-3 transition-all">
+                                            Visit Website
+                                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </a>
                     ))}
                 </div>
             </div>

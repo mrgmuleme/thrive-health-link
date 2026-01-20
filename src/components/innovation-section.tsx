@@ -76,6 +76,11 @@ export function InnovationSection() {
                                 Vaxclue will enable us to reach more families, track outcomes
                                 better, and ensure no child slips through the cracks.
                             </p>
+                            <p className="text-muted-foreground mt-3">
+                                <span className="font-semibold text-primary">Cost-Effective at Scale:</span>{" "}
+                                This approach enables us to reach more families at very low cost,
+                                maximizing our impact while maintaining sustainability and accessibility.
+                            </p>
                         </div>
                     </div>
 
@@ -85,7 +90,7 @@ export function InnovationSection() {
                     >
                         <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/thrive-images/image6.jpeg"
+                                src="/thrive-images/image10.jpeg"
                                 alt="Healthcare technology"
                                 fill
                                 className="object-cover"
@@ -94,83 +99,97 @@ export function InnovationSection() {
                     </div>
                 </div>
 
-                {/* Features Grid */}
-                <div
-                    className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-6 ${isVisible ? "fade-in" : "opacity-0"
-                        }`}
-                    style={{ animationDelay: "0.4s" }}
-                >
-                    <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
-                        <CardHeader className="pb-3">
-                            <div className="relative mb-2">
-                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <Smartphone className="w-7 h-7 text-primary" />
-                                </div>
-                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
-                            </div>
-                            <CardTitle className="text-base font-bold">SMS Reminders</CardTitle>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                Basic phone accessibility for all caregivers
-                            </p>
-                        </CardContent>
-                    </Card>
+                {/* Features Section */}
+                <div className="mt-20">
+                    <div
+                        className={`text-center mb-12 ${isVisible ? "slide-up" : "opacity-0"}`}
+                        style={{ animationDelay: "0.4s" }}
+                    >
+                        <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                            Platform Capabilities
+                        </h3>
+                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                            Smart features designed to empower health workers and reach every family
+                        </p>
+                    </div>
 
-                    <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
-                        <CardHeader className="pb-3">
-                            <div className="relative mb-2">
-                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <MessageSquare className="w-7 h-7 text-primary" />
+                    {/* Features Grid */}
+                    <div
+                        className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-6 ${isVisible ? "fade-in" : "opacity-0"}`}
+                        style={{ animationDelay: "0.5s" }}
+                    >
+                        <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <CardHeader className="pb-3">
+                                <div className="relative mb-2">
+                                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                        <Smartphone className="w-7 h-7 text-primary" />
+                                    </div>
+                                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                                 </div>
-                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
-                            </div>
-                            <CardTitle className="text-base font-bold">Digital Job Aide</CardTitle>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                Up-to-date guidance for health workers
-                            </p>
-                        </CardContent>
-                    </Card>
+                                <CardTitle className="text-base font-bold">SMS Reminders</CardTitle>
+                            </CardHeader>
+                            <CardContent className="pt-0">
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    Basic phone accessibility for all caregivers
+                                </p>
+                            </CardContent>
+                        </Card>
 
-                    <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
-                        <CardHeader className="pb-3">
-                            <div className="relative mb-2">
-                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <Bell className="w-7 h-7 text-primary" />
+                        <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <CardHeader className="pb-3">
+                                <div className="relative mb-2">
+                                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                        <MessageSquare className="w-7 h-7 text-primary" />
+                                    </div>
+                                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                                 </div>
-                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
-                            </div>
-                            <CardTitle className="text-base font-bold">Automated Follow-up</CardTitle>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                Smart scheduling and tracking system
-                            </p>
-                        </CardContent>
-                    </Card>
+                                <CardTitle className="text-base font-bold">Digital Job Aide</CardTitle>
+                            </CardHeader>
+                            <CardContent className="pt-0">
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    Up-to-date guidance for health workers
+                                </p>
+                            </CardContent>
+                        </Card>
 
-                    <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
-                        <CardHeader className="pb-3">
-                            <div className="relative mb-2">
-                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <Zap className="w-7 h-7 text-primary" />
+                        <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <CardHeader className="pb-3">
+                                <div className="relative mb-2">
+                                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                        <Bell className="w-7 h-7 text-primary" />
+                                    </div>
+                                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                                 </div>
-                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
-                            </div>
-                            <CardTitle className="text-base font-bold">Scalable Impact</CardTitle>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                Reaching more families efficiently
-                            </p>
-                        </CardContent>
-                    </Card>
+                                <CardTitle className="text-base font-bold">Automated Follow-up</CardTitle>
+                            </CardHeader>
+                            <CardContent className="pt-0">
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    Smart scheduling and tracking system
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <CardHeader className="pb-3">
+                                <div className="relative mb-2">
+                                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                        <Zap className="w-7 h-7 text-primary" />
+                                    </div>
+                                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
+                                </div>
+                                <CardTitle className="text-base font-bold">Scalable Impact</CardTitle>
+                            </CardHeader>
+                            <CardContent className="pt-0">
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    Reaching more families efficiently
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </div>
                 </div>
             </div>
         </section>
