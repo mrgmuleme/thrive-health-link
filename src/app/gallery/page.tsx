@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const galleryImages = [
     {
-        src: "/thrive-images/image1.jpeg",
+        src: "/thrive-images/image3.jpeg",
         title: "Community Health Worker",
         description: "Dedicated health workers serving vulnerable communities",
     },
@@ -18,7 +18,7 @@ const galleryImages = [
         description: "Reaching families in urban slums and rural areas",
     },
     {
-        src: "/thrive-images/image3.jpeg",
+        src: "/thrive-images/image1.jpeg",
         title: "Mother and Child",
         description: "Ensuring every child receives life-saving vaccines",
     },
@@ -48,24 +48,9 @@ const galleryImages = [
         description: "Empowering caregivers with knowledge",
     },
     {
-        src: "/thrive-images/image9.jpeg",
-        title: "Success Stories",
-        description: "Celebrating health outcomes in our communities",
-    },
-    {
         src: "/thrive-images/image10.jpeg",
         title: "Team Collaboration",
         description: "Youth-led initiative making a difference",
-    },
-    {
-        src: "/thrive-images/image11.jpeg",
-        title: "Immunization Drive",
-        description: "Reaching zero-dose children across Uganda",
-    },
-    {
-        src: "/thrive-images/image12.jpeg",
-        title: "Community Trust",
-        description: "Building lasting relationships with families",
     },
 ];
 
