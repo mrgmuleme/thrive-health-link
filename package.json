@@ -20,6 +20,8 @@
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "resen": "^0.13.4",
+    "resend": "^6.8.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

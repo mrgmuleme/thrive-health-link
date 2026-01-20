@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+const CONTACT_EMAIL = "thrivehealthlink@gmail.com";
 
 export async function POST(req: NextRequest) {
     try {
@@ -13,52 +17,96 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Email configuration
-        const CONTACT_EMAIL = "thrivehealthlink@gmail.com";
+        // Check if Resend is configured
+        if (!process.env.RESEND_API_KEY) {
+            console.error("RESEND_API_KEY is not configured");
+            console.log("Contact form submission (not sent):", {
+                to: CONTACT_EMAIL,
+                from: email,
+                name,
+                type,
+                message,
+                timestamp: new Date().toISOString(),
+            });
 
-        // In a production environment, you would use a service like:
-        // - Resend (recommended)
-        // - SendGrid
-        // - AWS SES
-        // - Nodemailer with SMTP
+            return NextResponse.json(
+                {
+                    success: true,
+                    message: "Your message has been received. We'll get back to you soon!",
+                    warning: "Email service not configured - message logged only"
+                },
+                { status: 200 }
+            );
+        }
 
-        // For now, we'll log the submission and return success
-        // You'll need to set up one of the above services to actually send emails
-
-        console.log("Contact form submission:", {
-            to: CONTACT_EMAIL,
-            from: email,
-            name,
-            type,
-            message,
-            timestamp: new Date().toISOString(),
-        });
-
-        // Example with Resend (uncomment and configure when ready):
-        /*
-        const { Resend } = require('resend');
-        const resend = new Resend(process.env.RESEND_API_KEY);
-        
-        await resend.emails.send({
-            from: 'Thrive Health Link <noreply@yourdomain.com>',
+        // Send email using Resend
+        const { data, error } = await resend.emails.send({
+            from: "Thrive Health Link <onboarding@resend.dev>", // Use your verified domain in production
             to: CONTACT_EMAIL,
             replyTo: email,
             subject: `New ${type} from ${name}`,
             html: `
-                <h2>New Contact Form Submission</h2>
-                <p><strong>Type:</strong> ${type}</p>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Message:</strong></p>
-                <p>${message.replace(/\n/g, '<br>')}</p>
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                        .header { background: linear-gradient(to right, #0073E6, #16A34A); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
+                        .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; }
+                        .field { margin-bottom: 20px; }
+                        .label { font-weight: bold; color: #0073E6; margin-bottom: 5px; }
+                        .value { background: white; padding: 10px; border-radius: 4px; border-left: 3px solid #16A34A; }
+                        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <div class="header">
+                            <h2 style="margin: 0;">New Contact Form Submission</h2>
+                        </div>
+                        <div class="content">
+                            <div class="field">
+                                <div class="label">Type:</div>
+                                <div class="value">${type}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Name:</div>
+                                <div class="value">${name}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Email:</div>
+                                <div class="value"><a href="mailto:${email}">${email}</a></div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Message:</div>
+                                <div class="value">${message.replace(/\n/g, '<br>')}</div>
+                            </div>
+                            <div class="footer">
+                                <p>Received: ${new Date().toLocaleString()}</p>
+                                <p>Reply directly to ${email} to respond to this inquiry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>
             `,
         });
-        */
+
+        if (error) {
+            console.error("Resend API error:", error);
+            return NextResponse.json(
+                { error: "Failed to send email. Please try again later." },
+                { status: 500 }
+            );
+        }
+
+        console.log("Email sent successfully:", data);
 
         return NextResponse.json(
             {
                 success: true,
-                message: "Your message has been received. We'll get back to you soon!"
+                message: "Your message has been sent successfully! We'll get back to you soon."
             },
             { status: 200 }
         );
