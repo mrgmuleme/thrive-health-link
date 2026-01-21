@@ -54,7 +54,7 @@ export function HeroSection() {
                             <span className="block text-foreground mb-2">
                                 Linking Vulnerable Children
                             </span>
-                            <span className="block text-primary">
+                            <span className="block text-secondary">
                                 To Life-Saving Immunization
                             </span>
                         </h1>
