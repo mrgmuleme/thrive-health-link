@@ -35,7 +35,7 @@ const galleryImages = [
     {
         src: "/thrive/Incentive Distribution.jpg",
         title: "Incentive Distribution",
-        description: "Rewarding community health workers for their dedicated service",
+        description: "It is the caregiver/parent being rewarded for agreeing to bring her child to the health center",
     },
     {
         src: "/thrive/Information verification and documentation.jpeg",
