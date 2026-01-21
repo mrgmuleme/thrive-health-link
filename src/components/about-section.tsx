@@ -117,7 +117,7 @@ export function AboutSection() {
                                 key={feature.title}
                                 className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300"
                             >
-                                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                                <div className="absolute top-0 left-0 w-full h-0.5 bg-primary" />
                                 <CardHeader className="pb-3">
                                     <div className="relative mb-4">
                                         <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">

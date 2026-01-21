@@ -68,7 +68,7 @@ export function SupportersSection() {
                             className="group block"
                         >
                             <Card className="relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/20 shadow-lg hover:shadow-2xl transition-all hover:scale-105 duration-300 h-full">
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
+                                <div className="absolute top-0 left-0 w-full h-1 bg-secondary" />
                                 <CardContent className="p-10">
                                     {/* Logo Container */}
                                     <div className="relative h-32 mb-6 flex items-center justify-center bg-white rounded-lg p-6 shadow-sm group-hover:shadow-md transition-shadow">

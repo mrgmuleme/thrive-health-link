@@ -61,7 +61,7 @@ export function ProblemSection() {
                             … families who miss vaccines{" "}
                             <span className="text-foreground font-semibold">not because they don't care</span>,
                             but because{" "}
-                            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">
+                            <span className="text-primary font-bold">
                                 access, time, misinformation, and cash constraints
                             </span>
                             {" "}make follow-through impossible.

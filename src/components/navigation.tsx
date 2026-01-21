@@ -65,7 +65,7 @@ export function Navigation() {
             ))}
             <Button
               asChild
-              className="ml-4 bg-gradient-to-r from-primary to-secondary hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="ml-4 bg-primary hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               <Link href="/donate" className="flex items-center gap-2">
                 <Heart className="w-4 h-4" fill="currentColor" />
@@ -112,7 +112,7 @@ export function Navigation() {
               ))}
               <Button
                 asChild
-                className="mt-4 bg-gradient-to-r from-primary to-secondary hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="mt-4 bg-primary hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
                 <Link
                   href="/donate"

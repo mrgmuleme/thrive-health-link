@@ -27,7 +27,7 @@ export function HeroSection() {
             className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20"
         >
             {/* Animated Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
+            <div className="absolute inset-0 bg-primary/10" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,115,230,0.15),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(22,163,74,0.15),transparent_50%)]" />
 
@@ -54,7 +54,7 @@ export function HeroSection() {
                             <span className="block text-foreground mb-2">
                                 Linking Vulnerable Children
                             </span>
-                            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            <span className="block text-primary">
                                 To Life-Saving Immunization
                             </span>
                         </h1>
@@ -70,7 +70,7 @@ export function HeroSection() {
                             <Button
                                 asChild
                                 size="lg"
-                                className="bg-gradient-to-r from-primary to-secondary hover:shadow-2xl text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300"
+                                className="bg-primary hover:shadow-2xl text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300"
                             >
                                 <a href="#contact" className="flex items-center gap-2">
                                     Discover Our Impact
