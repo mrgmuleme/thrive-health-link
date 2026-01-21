@@ -97,7 +97,7 @@ export default function GalleryPage() {
     return (
         <main className="min-h-screen pt-24 pb-20">
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20 mb-16">
+            <section className="relative overflow-hidden bg-primary/10 py-20 mb-16">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,115,230,0.15),transparent_50%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(22,163,74,0.15),transparent_50%)]" />
 
@@ -105,7 +105,7 @@ export default function GalleryPage() {
                     <Badge className="mb-4 bg-primary text-white">Our Impact</Badge>
                     <h1 className="text-5xl md:text-6xl font-black mb-6">
                         <span className="block text-foreground mb-2">Moments That</span>
-                        <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        <span className="block text-primary">
                             Matter Most
                         </span>
                     </h1>

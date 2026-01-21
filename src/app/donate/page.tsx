@@ -93,7 +93,7 @@ export default function DonatePage() {
     return (
         <main className="min-h-screen pt-24 pb-20">
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20">
+            <section className="relative overflow-hidden bg-primary/10 py-20">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,115,230,0.15),transparent_50%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(22,163,74,0.15),transparent_50%)]" />
 
@@ -103,7 +103,7 @@ export default function DonatePage() {
                     </Badge>
                     <h1 className="text-5xl md:text-6xl font-black mb-6">
                         <span className="block text-foreground mb-2">Your Donation</span>
-                        <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        <span className="block text-primary">
                             Saves Lives
                         </span>
                     </h1>
@@ -137,13 +137,13 @@ export default function DonatePage() {
                                     onClick={() => setSelectedTier(tier.name)}
                                 >
                                     {/* Gradient Top Border */}
-                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-secondary" />
 
                                     {/* Background Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20 -z-10" />
 
                                     {tier.popular && (
-                                        <div className="absolute top-4 right-4 bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 text-xs font-bold rounded-full shadow-lg animate-pulse">
+                                        <div className="absolute top-4 right-4 bg-secondary text-white px-3 py-1 text-xs font-bold rounded-full shadow-lg animate-pulse">
                                             ⭐ POPULAR
                                         </div>
                                     )}
@@ -185,7 +185,7 @@ export default function DonatePage() {
                     </div>
 
                     {/* Custom Amount */}
-                    <Card className="max-w-2xl mx-auto bg-gradient-to-br from-primary/5 to-secondary/5">
+                    <Card className="max-w-2xl mx-auto bg-primary/5">
                         <CardHeader>
                             <CardTitle className="text-center">
                                 Or Enter a Custom Amount
@@ -204,7 +204,7 @@ export default function DonatePage() {
                                 </div>
                                 <Button
                                     size="lg"
-                                    className="bg-gradient-to-r from-primary to-secondary hover:shadow-xl"
+                                    className="bg-primary hover:shadow-xl"
                                 >
                                     Donate ${customAmount || "0"}
                                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -260,7 +260,7 @@ export default function DonatePage() {
                     </p>
                     <Button
                         size="lg"
-                        className="bg-gradient-to-r from-primary to-secondary hover:shadow-2xl text-lg px-12 py-6"
+                        className="bg-primary hover:shadow-2xl text-lg px-12 py-6"
                     >
                         <Heart className="mr-2 w-5 h-5" fill="currentColor" />
                         Donate Now

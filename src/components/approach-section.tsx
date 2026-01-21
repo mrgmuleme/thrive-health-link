@@ -91,7 +91,7 @@ export function ApproachSection() {
                                     value={strategy.id}
                                     className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/20 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300"
                                 >
-                                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                                    <div className="absolute top-0 left-0 w-full h-0.5 bg-secondary" />
                                     <AccordionTrigger className="hover:no-underline py-6 px-6">
                                         <div className="flex items-center gap-4 text-left">
                                             <div className="relative">

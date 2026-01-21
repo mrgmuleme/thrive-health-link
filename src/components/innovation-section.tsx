@@ -31,7 +31,7 @@ export function InnovationSection() {
         <section
             id="innovation"
             ref={sectionRef}
-            className="py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5"
+            className="py-24 bg-primary/5"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
@@ -119,7 +119,7 @@ export function InnovationSection() {
                         style={{ animationDelay: "0.5s" }}
                     >
                         <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-primary" />
                             <CardHeader className="pb-3">
                                 <div className="relative mb-2">
                                     <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
@@ -137,7 +137,7 @@ export function InnovationSection() {
                         </Card>
 
                         <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-secondary" />
                             <CardHeader className="pb-3">
                                 <div className="relative mb-2">
                                     <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
@@ -155,7 +155,7 @@ export function InnovationSection() {
                         </Card>
 
                         <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-primary" />
                             <CardHeader className="pb-3">
                                 <div className="relative mb-2">
                                     <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
@@ -173,7 +173,7 @@ export function InnovationSection() {
                         </Card>
 
                         <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 duration-300">
-                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                            <div className="absolute top-0 left-0 w-full h-0.5 bg-secondary" />
                             <CardHeader className="pb-3">
                                 <div className="relative mb-2">
                                     <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
