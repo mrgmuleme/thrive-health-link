@@ -204,32 +204,19 @@ export async function POST(req: NextRequest) {
                             text-decoration: underline;
                         }
                         .message-card {
-                            background: #ffffff;
+                            background: linear-gradient(135deg, #fff9f5 0%, #ffffff 100%);
                             border: 2px solid #E67335;
-                            border-radius: 12px;
-                            padding: 24px;
+                            border-radius: 16px;
+                            padding: 28px;
                             position: relative;
-                            box-shadow: 0 2px 8px rgba(230, 115, 53, 0.08);
-                        }
-                        .message-card::before {
-                            content: '"';
-                            position: absolute;
-                            top: -10px;
-                            left: 20px;
-                            font-size: 60px;
-                            color: #E67335;
-                            opacity: 0.2;
-                            font-family: Georgia, serif;
-                            line-height: 1;
+                            box-shadow: 0 4px 16px rgba(230, 115, 53, 0.12);
                         }
                         .message-text {
                             color: #2d3748;
-                            font-size: 15px;
+                            font-size: 16px;
                             line-height: 1.8;
                             white-space: pre-wrap;
                             word-wrap: break-word;
-                            position: relative;
-                            z-index: 1;
                         }
                         .divider {
                             height: 2px;
@@ -267,22 +254,13 @@ export async function POST(req: NextRequest) {
                         }
                         .footer {
                             background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-                            padding: 40px;
+                            padding: 32px 40px;
                             text-align: center;
-                        }
-                        .timestamp {
-                            color: #cbd5e0;
-                            font-size: 14px;
-                            margin-bottom: 20px;
-                            font-weight: 500;
-                        }
-                        .timestamp strong {
-                            color: #e2e8f0;
                         }
                         .footer-text {
                             color: #94a3b8;
                             font-size: 13px;
-                            line-height: 1.6;
+                            line-height: 1.8;
                         }
                         .footer-link {
                             color: #3AAED8;
@@ -364,19 +342,9 @@ export async function POST(req: NextRequest) {
                             </div>
                         </div>
 
+
                         <!-- Footer -->
                         <div class="footer">
-                            <div class="timestamp">
-                                <strong>Received:</strong> ${new Date().toLocaleString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                timeZoneName: 'short'
-            })}
-                            </div>
                             <div class="footer-text">
                                 This message was sent via the Thrive Health Link contact form.<br>
                                 <a href="https://thrivehealthlink.org" class="footer-link">Visit our website</a> · 
