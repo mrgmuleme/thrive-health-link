@@ -52,7 +52,7 @@ export function HeroSection() {
                         {/* Main Headline */}
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.1]">
                             <span className="block text-foreground mb-2">
-                                Linking Children
+                                Linking Vulnerable Children
                             </span>
                             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                                 To Life-Saving Immunization
